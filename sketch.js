@@ -16,7 +16,7 @@ function setup() {
   // create canvas
   createCanvas(windowWidth, windowHeight);
   // calculate new width and height for cat image (half canvas width, keep aspect)
-  imgW = windowWidth / 2;
+  imgW = windowWidth / 2.5;
   imgH = imgCat.height * (imgW / imgCat.width);
   // center image
   imgX = (windowWidth - imgW) / 2;
@@ -96,7 +96,7 @@ function calcRevealedPercent() {
 function windowResized() {
   // recalculate everything on resize
   resizeCanvas(windowWidth, windowHeight);
-  imgW = windowWidth / 2;
+  imgW = windowWidth / 2.5;
   imgH = imgCat.height * (imgW / imgCat.width);
   imgX = (windowWidth - imgW) / 2;
   imgY = (windowHeight - imgH) / 2;
