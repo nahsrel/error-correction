@@ -9,8 +9,7 @@ let percentRevealed = 0; // percent of mask erased
 
 function preload() {
   // load cat image from url
-  imgCat = loadImage("qr_code.gif");
-  imgOverlay = loadImage("3_sqrs.png");
+  imgCat = loadImage("assets/qr_code.gif");
 }
 
 function setup() {
@@ -20,8 +19,8 @@ function setup() {
   imgW = windowWidth / 5;
   imgH = imgCat.height * (imgW / imgCat.width);
   // center image
-  imgX = (windowWidth - imgW) / 5;
-  imgY = (windowHeight - imgH) / 5;
+  imgX = (windowWidth - imgW) / 2;
+  imgY = (windowHeight - imgH) / 2;
   // resize cat image
   imgCat.resize(imgW, imgH);
   // create graphics buffer for mask, same size as image
@@ -99,8 +98,8 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   imgW = windowWidth / 5;
   imgH = imgCat.height * (imgW / imgCat.width);
-  imgX = (windowWidth - imgW) / 5;
-  imgY = (windowHeight - imgH) / 5;
+  imgX = (windowWidth - imgW) / 2;
+  imgY = (windowHeight - imgH) / 2;
   imgCat.resize(imgW, imgH);
   bufMask = createGraphics(imgW, imgH);
   bufMask.background(100);
