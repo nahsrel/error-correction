@@ -17,11 +17,11 @@ function setup() {
   // create canvas
   createCanvas(windowWidth, windowHeight);
   // calculate new width and height for cat image (half canvas width, keep aspect)
-  imgW = windowWidth / 2;
+  imgW = windowWidth / 5;
   imgH = imgCat.height * (imgW / imgCat.width);
   // center image
-  imgX = (windowWidth - imgW) / 2;
-  imgY = (windowHeight - imgH) / 2;
+  imgX = (windowWidth - imgW) / 5;
+  imgY = (windowHeight - imgH) / 5;
   // resize cat image
   imgCat.resize(imgW, imgH);
   // create graphics buffer for mask, same size as image
