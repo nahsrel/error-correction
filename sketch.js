@@ -97,10 +97,10 @@ function calcRevealedPercent() {
 function windowResized() {
   // recalculate everything on resize
   resizeCanvas(windowWidth, windowHeight);
-  imgW = windowWidth / 2;
+  imgW = windowWidth / 5;
   imgH = imgCat.height * (imgW / imgCat.width);
-  imgX = (windowWidth - imgW) / 2;
-  imgY = (windowHeight - imgH) / 2;
+  imgX = (windowWidth - imgW) / 5;
+  imgY = (windowHeight - imgH) / 5;
   imgCat.resize(imgW, imgH);
   bufMask = createGraphics(imgW, imgH);
   bufMask.background(100);
