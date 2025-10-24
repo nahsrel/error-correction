@@ -1,6 +1,7 @@
 // Pseudocode: Load and resize cat image to half canvas width and center it Create a graphics buffer for the black mask, same size as cat image Draw cat image, then mask on top User drags mouse to erase (reveal) parts of the mask Calculate percent of mask erased and display as text, clearing previous text before drawing new percentage
 
 let imgCat; // cat image
+let img3sqrs;
 let bufMask; // graphics buffer for black mask
 let imgW, imgH; // dimensions of resized cat image
 let imgX, imgY; // position to center cat image
@@ -10,6 +11,8 @@ let percentRevealed = 0; // percent of mask erased
 function preload() {
   // load cat image from url
   imgCat = loadImage("qr_code.gif");
+  img3sqrs = loadImage("3_sqrs.png");
+}
 }
 
 function setup() {
@@ -27,6 +30,7 @@ function setup() {
   bufMask = createGraphics(imgW, imgH);
   // fill mask with black, fully opaque
   bufMask.background(100);
+  img3sqrs.resize(imgW,imgH);
 }
 
 function draw() {
@@ -34,6 +38,7 @@ function draw() {
   image(imgCat, imgX, imgY);
   // draw mask on top
   image(bufMask, imgX, imgY);
+  image(img3sqrs, imgX, imgY);
   // calculate percent revealed
   percentRevealed = calcRevealedPercent();
   // clear area where percentage text will be drawn
