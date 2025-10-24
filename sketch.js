@@ -11,6 +11,7 @@ let percentRevealed = 0; // percent of mask erased
 function preload() {
   // load cat image from url
   imgCat = loadImage("qr_code.gif");
+
   img3sqrs = loadImage("3_sqrs.png");
 }
 
@@ -29,7 +30,7 @@ function setup() {
   bufMask = createGraphics(imgW, imgH);
   // fill mask with black, fully opaque
   bufMask.background(100);
-  img3sqrs.resize(imgW, imgH);
+  img3sqrs.resize(imgW,imgH);
 }
 
 function draw() {
@@ -37,8 +38,8 @@ function draw() {
   image(imgCat, imgX, imgY);
   // draw mask on top
   image(bufMask, imgX, imgY);
-  image(img3sqrs, imgX, imgY);
   // calculate percent revealed
+  image(img3sqrs, imgX, imgY);
   percentRevealed = calcRevealedPercent();
   // clear area where percentage text will be drawn
   let textBoxW = 300;
