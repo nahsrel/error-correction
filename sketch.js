@@ -16,7 +16,7 @@ function setup() {
   // create canvas
   createCanvas(windowWidth, windowHeight);
   // calculate new width and height for cat image (half canvas width, keep aspect)
-  imgW = windowWidth / 4;
+  imgW = windowWidth / 3;
   imgH = imgCat.height * (imgW / imgCat.width);
   // center image
   imgX = (windowWidth - imgW) / 2;
@@ -80,7 +80,7 @@ function touchMoved() {
 function calcRevealedPercent() {
   // get pixel data from mask
   let revealed = 0;
-  let total = imgW * imgH *4;
+  let total = imgW * imgH *5;
   bufMask.loadPixels();
   // loop through pixels, count how many are fully transparent
   for (let i = 3; i < bufMask.pixels.length; i += 4) {
@@ -96,7 +96,7 @@ function calcRevealedPercent() {
 function windowResized() {
   // recalculate everything on resize
   resizeCanvas(windowWidth, windowHeight);
-  imgW = windowWidth / 4;
+  imgW = windowWidth / 3;
   imgH = imgCat.height * (imgW / imgCat.width);
   imgX = (windowWidth - imgW) / 2;
   imgY = (windowHeight - imgH) / 2;
