@@ -30,7 +30,7 @@ function setup() {
   bufMask = createGraphics(imgW, imgH);
   // fill mask with black, fully opaque
   bufMask.background(100);
-  img3sqrs.resize(imgW,imgH);
+  img3sqrs.resize(imgW, imgH);
 }
 
 function draw() {
@@ -108,4 +108,5 @@ function windowResized() {
   imgCat.resize(imgW, imgH);
   bufMask = createGraphics(imgW, imgH);
   bufMask.background(100);
+  img3sqrs.resize(imgW, imgH);
 }
