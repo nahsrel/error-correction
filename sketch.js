@@ -13,7 +13,6 @@ function preload() {
   imgCat = loadImage("qr_code.gif");
   img3sqrs = loadImage("3_sqrs.png");
 }
-}
 
 function setup() {
   // create canvas
