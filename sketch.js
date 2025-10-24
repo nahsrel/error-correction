@@ -80,7 +80,7 @@ function touchMoved() {
 function calcRevealedPercent() {
   // get pixel data from mask
   let revealed = 0;
-  let total = imgW * imgH *5;
+  let total = imgW * imgH *4;
   bufMask.loadPixels();
   // loop through pixels, count how many are fully transparent
   for (let i = 3; i < bufMask.pixels.length; i += 4) {
