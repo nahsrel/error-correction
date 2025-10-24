@@ -9,7 +9,8 @@ let percentRevealed = 0; // percent of mask erased
 
 function preload() {
   // load cat image from url
-  imgCat = loadImage("assets/qr_code.gif");
+  imgCat = loadImage("qr_code.gif");
+  imgOverlay = loadImage("3_sqrs.png");
 }
 
 function setup() {
